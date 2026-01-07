@@ -1,13 +1,3 @@
-import streamlit as st
-st.header('Lanzar una moneda')
-
-number_of_trials = st.slider('¿Números de intentos?', 1, 1000, 10)
-start_button = st.button('Ejecutar')
-
-if start_button:
-    st.write(f'Experimento con {number_of_trials} intentos en curso.')
-st.write('Esta aplicacion aun no esta funcional. En Construcción.')
-
 import scipy.stats
 import streamlit as st
 import time
@@ -38,3 +28,4 @@ start_button = st.button('Ejecutar')
 
 if start_button:
     st.write(f'Experimento con {number_of_trials} intentos en curso.')
+    mean = toss_coin(number_of_trials)

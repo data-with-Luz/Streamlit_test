@@ -6,15 +6,16 @@ st.header('Lanzar una moneda')
 
 chart = st.line_chart([0.5])
 
-def toss_coin(n): 
+def toss_coin(n):
+
     trial_outcomes = scipy.stats.bernoulli.rvs(p=0.5, size=n)
 
     mean = None
     outcome_no = 0
     outcome_1_count = 0
-    
+
     for r in trial_outcomes:
-        outcome_no += 1
+        outcome_no +=1
         if r == 1:
             outcome_1_count += 1
         mean = outcome_1_count / outcome_no
